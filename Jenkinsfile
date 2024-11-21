@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Run Tests') {
             steps {
-                echo 'Building project...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
+                script {
+                    def result = sh(script: 'robot --outputdir results tests/', returnStatus: true)
+                    if (result != 0) {
+                        error("Tests failed with exit code: ${result}")
+                    }
+                }
             }
         }
     }
