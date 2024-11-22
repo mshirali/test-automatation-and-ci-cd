@@ -1,0 +1,27 @@
+# Ignorer les fichiers générés par Robot Framework
+output/
+log/
+report/
+*.xml
+
+# Fichiers générés par les éditeurs (VSCode, Sublime, etc.)
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Environnement virtuel Python
+venv/
+env/
+*.egg-info/
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers de configuration spécifiques à l'IDE
+*.iml
+*.project
+
+# Fichiers de configuration de Pytest
+*.coveragerc
